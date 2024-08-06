@@ -1,0 +1,43 @@
+// @media only screen and (max-width: 1400px)
+//     .category__items
+//         max-width: none
+// @media only screen and (max-width: 1200px)
+//     .promo
+//         margin: 15px auto
+//     .catalog_content
+//         width: 300px !important
+
+@media only screen and (max-width: 994px)
+    // .icons_block
+    //     display: none
+    //     span
+    //         color: white
+    //         margin: 0 0.5vw 0 0.5vw
+    //         font-size: 1.5rem
+    // header a:not(:first-child)
+    //     display: none
+    .hamburger
+        display: block
+        width: 30px
+        height: 25px
+        cursor: pointer
+        margin-right: 17px
+        span
+            display: block
+            border-radius: 1lvh
+            height: 5px
+            width: 100%
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(123, 194, 254, 1), rgba(215, 149, 255, 1), rgba(255, 255, 255, 0.7))
+            margin-bottom: 5px
+            transition: .5s all
+            &_active
+                transform: translateY(25px)
+                span
+                    margin-bottom: -1px
+                    &:nth-child(1)
+                        display: block
+                        transform: rotate(-45deg)
+                    &:nth-child(2)
+                        display: none
+                    &:nth-child(3)
+                        transform: rotate(45deg)
