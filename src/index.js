@@ -5,4 +5,4 @@ import "./js/main.js";
 //sass
 // import "./sass/index.sass";
 // //css
-// import "./css/index.min.css"
+import "./css/index.min.css"

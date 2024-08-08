@@ -3,8 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-// Получаем все HTML файлы в папке src
 const htmlPages = glob.sync('./src/**/*.html');
 const entries = htmlPages.reduce((acc, page) => {
     const name = path.basename(page, '.html');
@@ -13,27 +15,17 @@ const entries = htmlPages.reduce((acc, page) => {
 }, {});
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: entries,
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js',
-        assetModuleFilename: 'img/[name][ext]',
+        filename: 'js/[name].[contenthash].js', // JS файлы в подкаталоге
         clean: true,
     },
     performance: {
         hints: false,
         maxAssetSize: 512000,
         maxEntrypointSize: 512000,
-    },
-    devServer: {
-        port: 9000,
-        compress: true,
-        hot: true,
-        static: {
-            directory: path.join(__dirname, './dist'),
-        },
-        historyApiFallback: true, // Для маршрутизации SPA
     },
     module: {
         rules: [
@@ -45,7 +37,7 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader, // Вынесение SASS в отдельные файлы
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
                 ],
@@ -53,7 +45,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader, // Вынесение CSS в отдельные файлы
+                    MiniCssExtractPlugin.loader,
                     'css-loader'
                 ],
             },
@@ -61,7 +53,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|webm)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'img/[name][ext]',
+                    filename: 'img/[name][ext]', // Изображения в папке img
                 }
             }
         ]
@@ -72,14 +64,45 @@ module.exports = {
             return new HtmlWebpackPlugin({
                 filename: path.basename(page),
                 template: page,
-                inject: true,
-                chunks: [name], // Добавляем только нужные чанки
-                minify: false // Отключаем минификацию для диагностики
+                inject: 'body',
+                chunks: [name],
+                minify: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true,
+                    removeEmptyAttributes: true,
+                    removeStyleLinkTypeAttributes: true,
+                    keepClosingSlash: true,
+                    minifyJS: true,
+                    minifyCSS: true,
+                    minifyURLs: true
+                }
             });
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css', // Вынесение CSS в отдельные файлы
+            filename: 'css/[name].[contenthash].css', // CSS файлы в подкаталоге
         }),
-        new CssMinimizerPlugin() // Минификация CSS
+        new CssMinimizerPlugin(),
+        new CleanWebpackPlugin(),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/img'), // Путь к исходной папке с изображениями
+                    to: path.resolve(__dirname, 'dist/img'), // Путь к папке назначения
+                    noErrorOnMissing: true, // Не показывать ошибку, если папка пуста
+                    globOptions: {
+                        ignore: ['**/ignored-file.png'], // Игнорировать определенные файлы
+                    },
+                },
+            ],
+        }),
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin(),
+            new CssMinimizerPlugin(),
+        ],
+    },
 };
