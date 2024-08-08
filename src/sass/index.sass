@@ -14,20 +14,57 @@ body
         padding-bottom: 75px
     .advantages
         background-image: linear-gradient(to bottom, rgba(129, 106, 186, 1), rgba(54, 49, 108, .9), rgba(50, 53, 106, .9))
-        padding-bottom: 55px
     .partners
         background-image: linear-gradient(to top, rgba(129, 106, 186, 1), rgba(54, 49, 108, .9), rgba(50, 53, 106, .9))
-        padding: 10px
+        padding: 75px 10px
     .formFeedback
-        padding: 65px 10px 75px 10px
+        padding: 0 10px
         background-image: linear-gradient(to bottom, rgba(129, 106, 186, 1), rgba(168, 136, 211, .9))
     .usefully
         padding: 75px 10px
         background-image: linear-gradient(to top, rgba(129, 106, 186, 1), rgba(168, 136, 211, .9))
     .cases
+        padding: 0px 10px
+        background-image: linear-gradient(to bottom, rgba(129, 106, 186, 1), rgba(171, 112, 236, .8))
+    .tariff
         padding: 75px 10px
-        background-image: linear-gradient(to bottom, rgba(129, 106, 186, 1), rgba(168, 136, 211, .9))
+        background-image: linear-gradient(to top, rgba(70, 54, 115, 1), rgba(171, 112, 236, .8))
+        display: flex
+        flex-direction: column
+        gap: 20px
+    .crmRequest
+        padding: 0 10px
+        background-image: linear-gradient(to bottom, rgba(70, 54, 115, 1), rgba(29, 26, 53, 1) rgba(37, 48, 102, .8))
+    .partnerCrm
+        padding: 75px 10px
+        background-image: linear-gradient(to top, rgba(55, 64, 159, 1), rgba(29, 26, 53, 1) rgba(37, 48, 102, .8))
+    .feedBackQuestion
+        padding: 0px 10px
+        background-image: linear-gradient(to bottom, rgba(55, 64, 159, 1), rgba(69, 69, 189, 1), rgba(84, 64, 197, .8), rgba(55, 64, 159, 1))
+    .contacts
+        padding: 75px 10px
+        background-image: linear-gradient(240deg, rgba(55, 64, 159, 1), rgb(52, 42, 113, 1), rgba(31, 25, 61, 1), rgba(17, 16, 30, 1))
 
+// base function
+@mixin box-shadowBlur
+    border: 2px dotted transparent
+    background: linear-gradient(rgba(183, 126, 255, 1) 0 0) padding-box, linear-gradient(93deg, #383FEC 49.3%, #23FFFF 87.76%) border-box, linear-gradient(0deg, #8FDDFF, #8FDDFF) border-box
+    box-shadow: 0px 0px 10px 0px rgba(150, 98, 255, 1)
+
+@mixin box-shadowBtn
+    background: linear-gradient(rgba(30, 0, 68, 1) 0 0) padding-box, linear-gradient(93deg, #383FEC 49.3%, #23FFFF 87.76%) border-box, linear-gradient(0deg, #8FDDFF, #8FDDFF) border-box
+
+@mixin box-shadowNoBlur
+    box-shadow: 0 1px 0 0 rgba(143, 221, 255, 1), -1px 0 0 0 rgba(56, 63, 236, 0.7), -1px -1px 0 0 rgba(56, 63, 236, 0.7), 1px 0px 0 0 rgba(35, 255, 255, 1)
+    border: 0px solid
+
+// base settings
+input[type="text"],::-webkit-input-placeholder
+    color: white
+    outline: none
+input[type="text"],::-moz-placeholder
+    color: white
+    outline: none
 h1
     font-size: 24px
 h2
@@ -45,3 +82,7 @@ h3
 @import './section/usefully'
 @import './section/cases'
 @import './section/tariff'
+@import './section/crmRequest'
+@import './section/partnerCrm'
+@import './section/feedBackQuestion'
+@import './section/contacts'

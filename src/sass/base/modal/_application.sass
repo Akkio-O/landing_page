@@ -1,0 +1,28 @@
+.tariff
+    &__modal
+        &_formWrapper
+            position: fixed
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            z-index: 1
+            display: none
+            padding: 20px
+            width: 80%
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) 
+            .close
+                color: rgb(30, 0, 68)
+                float: right
+                font-size: 28px
+                font-weight: bold
+
+            &:hover,
+            &:focus
+                text-decoration: none
+                cursor: pointer
+        &_thanks
+            display: none
+        .activeF
+            display: flex
+        .activeB
+            display: block

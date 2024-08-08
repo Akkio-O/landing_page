@@ -1,0 +1,141 @@
+.tariff
+    &__wrapper
+        &_block
+            padding: 19px 12px 18px 12px
+            background: rgba(37, 26, 69, .7)
+            border-radius: 15px
+            border: 2px solid transparent
+            background: linear-gradient(200deg, rgb(100, 60, 149) 0, rgb(17, 11, 49) 100%) padding-box, linear-gradient(176.42deg, #B195FF -126.75%, #D795FF 97.05%) border-box
+            box-shadow: 0px 0px 20px 0px rgba(215, 149, 255, 1), 0px 0px 4px 0px rgba(215, 149, 255, 1)
+            &-crm
+                width: 100%
+                background: rgba(158, 0, 255, 0.15)
+                display: grid
+                grid-template-columns: 170px 1fr
+                align-items: center
+                justify-items: center
+                padding: 10px
+                border-radius: 10px
+                margin-bottom: 10px
+                p
+                    margin-top: auto
+                    font-size: 12px
+                    font-weight: 400
+                    line-height: 13.88px
+
+                h2
+                    background: linear-gradient(176.42deg, #B195FF -126.75%, #D795FF 97.05%)
+                    color: transparent
+                    background-clip: text
+                    -webkit-background-clip: text
+                    font-weight: 700
+                    line-height: 46px
+
+            &-text
+                display: flex
+                flex-direction: column
+                gap: 10px
+                &--content
+                    display: flex
+                    gap: 10px
+                    div
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 20px
+                        height: 20px
+                        border-radius: 100%
+                        background: rgba(82, 67, 194, 0.15)
+            button
+                width: 206px
+                height: 59px
+                display: block
+                margin: 0 auto
+                border-radius: 5px
+                color: white
+                background: rgba(30, 0, 68, .8)
+                border: 1px solid
+                box-shadow: 1px -1px 0px 0px rgba(143, 221, 255, .4), -1px -1px 0px 0px rgba(143, 221, 255, .43), 1px 1px 1px 0px rgba(56, 63, 236, .54), -1px 1px 1px 0px rgba(35, 255, 255, .55), 0px 0px 19px 9px rgba(162, 45, 247, 0.1), 0px 0px 46.85px 0px rgba(162, 45, 247, 0.1), 0px 0px 25.48px 0px rgba(162, 45, 247, 0.1), 0px 0px 13px 0px rgba(162, 45, 247, 0.1)
+                border: 0px solid
+                transition: .5s
+                &:hover
+                    color: rgba(255, 255, 255, .8)
+                    box-shadow: -1px -1px 0px 0px rgba(89, 248, 210, .4), 1px -1px 0px 0px rgba(116, 223, 221, .43), -1px 1px 1px 0px rgba(161, 180, 239, .54), 1px 1px 1px 0px rgba(202, 142, 255, .55)
+    &__modal
+        &_formWrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 20px
+            padding: 44px 15px 44px 15px
+            border-radius: 20px
+            @include box-shadowBlur
+
+            h2
+                font-family: Space Grotesk
+                font-size: 24px
+                font-weight: 700
+                line-height: 30px
+            input
+                &:focus
+                    border: 0px solid
+
+            input[type="text"],::-webkit-input-placeholder
+                color: white
+                outline: none
+            input[type="text"]
+                @include box-shadowNoBlur
+                &:hover
+                    box-shadow: -2px -2px 4px 0px rgba(118, 60, 145, .64), 2px 2px 2px 1px rgba(114, 49, 191, .46)
+                    color: rgba(255, 255, 255, .8) !important
+            input[type="checkbox"]
+                width: auto
+            input[type="text"],::-moz-placeholder
+                color: white
+                outline: none
+            input
+                color: white
+                width: 100%
+                border-radius: 10px
+                padding: 10px
+                background-color: transparent
+                transition: all .3s
+
+            button
+                width: 228px
+                height: 63px
+                border-radius: 19px
+                color: rgba(233, 222, 255, 1)
+                padding: 20px
+                border: 0px solid
+                transition: 2s
+                @include box-shadowBtn
+                box-shadow: 0px 0px 3.15px 0px rgba(162, 45, 247, 0.1), 0px 0px 6.52px 0px rgba(162, 45, 247, 0.1), 0px 0px 13px 0px rgba(162, 45, 247, 0.1), 0px 0px 25.48px 0px rgba(162, 45, 247, 0.1), 0px 0px 46.85px 0px rgba(162, 45, 247, 0.1), 0px 0px 19px 9px rgba(162, 45, 247, 0.1)
+                &:hover
+                    color: rgba(255, 255, 255, .8)
+                    box-shadow: 0 -1px 0 0 rgba(143, 221, 255, 0.7), 1px 0 0 0 rgba(56, 63, 236, 0.7), 1px 1px 0 0 rgba(56, 63, 236, 0.7), -1px 0px 0 0 rgba(35, 255, 255, 0.7), 0px 0px 3.15px 0px rgba(162, 45, 247, 0.1), 0px 0px 6.52px 0px rgba(162, 45, 247, 0.1), 0px 0px 13px 0px rgba(162, 45, 247, 0.1), 0px 0px 25.48px 0px rgba(162, 45, 247, 0.1), 0px 0px 46.85px 0px rgba(162, 45, 247, 0.1), 0px 0px 19px 9px rgba(162, 45, 247, 0.1)
+
+            div
+                display: flex
+                align-items: center
+                gap: 5px
+                p
+                    font-size: 10px
+                    font-weight: 400
+                    line-height: 15px
+                    text-align: center
+        &_thanks
+            position: fixed
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            z-index: 1
+            text-align: center
+            padding: 12px 69px 11px 68px
+            border-radius: 20px
+            background: rgba(99, 71, 135, .9)
+            border: 0px solid
+            border-image-source: linear-gradient(0deg, #8FDDFF, #8FDDFF), linear-gradient(93deg, #383FEC 49.3%, #23FFFF 87.76%)
+            box-shadow: 0px 0px 20px 0px rgba(215, 149, 255, 1), 0px 0px 4px 0px rgba(215, 149, 255, 1)
+
+@import '../base/modal/application'
