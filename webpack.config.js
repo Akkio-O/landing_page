@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const glob = require('glob');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 // Получаем все HTML файлы в папке src
 const htmlPages = glob.sync('./src/**/*.html');
@@ -9,14 +11,14 @@ const entries = htmlPages.reduce((acc, page) => {
     acc[name] = path.resolve(__dirname, `./src/${name}.js`);
     return acc;
 }, {});
+
 module.exports = {
     mode: 'development',
     entry: entries,
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name][contenthash].js',
-        pathinfo: true,
-        assetModuleFilename: '[name][ext]',
+        filename: '[name].[contenthash].js',
+        assetModuleFilename: 'img/[name][ext]',
         clean: true,
     },
     performance: {
@@ -30,7 +32,8 @@ module.exports = {
         hot: true,
         static: {
             directory: path.join(__dirname, './dist'),
-        }
+        },
+        historyApiFallback: true, // Для маршрутизации SPA
     },
     module: {
         rules: [
@@ -41,12 +44,18 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
-
+                use: [
+                    MiniCssExtractPlugin.loader, // Вынесение SASS в отдельные файлы
+                    'css-loader',
+                    'sass-loader'
+                ],
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: [
+                    MiniCssExtractPlugin.loader, // Вынесение CSS в отдельные файлы
+                    'css-loader'
+                ],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|webm)$/i,
@@ -67,6 +76,10 @@ module.exports = {
                 chunks: [name], // Добавляем только нужные чанки
                 minify: false // Отключаем минификацию для диагностики
             });
-        })
-    ]
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css', // Вынесение CSS в отдельные файлы
+        }),
+        new CssMinimizerPlugin() // Минификация CSS
+    ],
 };
