@@ -69,15 +69,16 @@ module.exports = {
       filename: 'css/[name].[contenthash].css',
     }),
     new CleanWebpackPlugin(),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, 'src/img'),
-    //       to: path.resolve(__dirname, 'dist/img'),
-    //       noErrorOnMissing: true,
-    //     },
-    //   ],
-    // }),
+    // download images to dist folder
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/img'),
+          to: path.resolve(__dirname, 'dist/img'),
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
   ],
   optimization: {
     minimize: true,
