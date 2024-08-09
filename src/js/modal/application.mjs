@@ -7,9 +7,11 @@ const activeB = 'activeB';
 const dataTariff = () => {
     const openModal = (block, active) => {
         block.classList.add(active);
+        document.body.classList.add('overlay')
     }
     const closeModal = (block, active) => {
         block.classList.remove(active);
+        document.body.classList.remove('overlay')
     }
 
     window.addEventListener('click', (e) => {

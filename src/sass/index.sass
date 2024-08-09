@@ -14,6 +14,7 @@ body
         padding-bottom: 75px
     .advantages
         background-image: linear-gradient(to bottom, rgba(129, 106, 186, 1), rgba(54, 49, 108, .9), rgba(50, 53, 106, .9))
+        padding: px 10px
     .partners
         background-image: linear-gradient(to top, rgba(129, 106, 186, 1), rgba(54, 49, 108, .9), rgba(50, 53, 106, .9))
         padding: 75px 10px
@@ -31,7 +32,6 @@ body
         background-image: linear-gradient(to top, rgba(70, 54, 115, 1), rgba(171, 112, 236, .8))
         display: flex
         flex-direction: column
-        gap: 20px
     .crmRequest
         padding: 0 10px
         background-image: linear-gradient(to bottom, rgba(70, 54, 115, 1), rgba(29, 26, 53, 1) rgba(37, 48, 102, .8))
@@ -59,6 +59,9 @@ body
     border: 0px solid
 
 // base settings
+input
+    &:focus
+        border: 0px solid
 input[type="text"],::-webkit-input-placeholder
     color: white
     outline: none
@@ -72,9 +75,13 @@ h2
 h3
     font-size: 17px
 
+.overlay
+    z-index: 2
+    background-color: rgba(0,0,0, 1)
+    transition: all 1s
+
 @import 'base/media'
 @import './header/header'
-@import './header/nav'
 @import './section/promo'
 @import './section/advantages'
 @import './section/partners'
