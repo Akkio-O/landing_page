@@ -2,12 +2,17 @@
 .promo__promoSVG
     width: 704px !important
 // laptop
-@media (min-width: 980px) and (max-width: 1400px)
-    .promo__promoSVG
-        width: 704px !important
-    .promo__btn
-        border-radius: 20px
-        height: 68px !important
+@media (min-width: 980px)
+    .promo
+        overflow: hidden !important
+        .promo__promoSVG
+            width: 704px !important
+        .promo__btn
+            border-radius: 20px
+            height: 68px !important
 
 //desktop
 @media (min-width: 1400px)
+@media (min-width: 1600px)
+    .promo__lineSVG
+        transform: translateY(-200px)
