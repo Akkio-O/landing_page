@@ -1,36 +1,13 @@
-.promo
-    .promo__lineSVG, .promo__feedback
-        position: absolute
-    .promo__feedback
-        background-color: rgba(30, 0, 68, .5)
-        padding: 25px
-        right: 0
-        border-radius: 15px 0px 0px 15px
-        z-index: 1
-        img
-            filter: drop-shadow(0px 0px 3px rgba(0, 255, 225, 1))
-        hr
-            border: 1px solid
-    .promo__svgBlock
-        .promo__promoSVG
-            margin: 34px 0 75px 0
-            position: relative
-        .promo__promoSVG, .promo__lineSVG
-            width: 100%
-
+@media (min-width: 640px) and (max-width: 980px)
+.promo__promoSVG
+    width: 704px !important
+// laptop
+@media (min-width: 980px) and (max-width: 1400px)
+    .promo__promoSVG
+        width: 704px !important
     .promo__btn
-        height: 36px
-        padding: 10px 40px 10px 40px
-        border-radius: 40px
-        background: rgba(177, 149, 255, 0.5)
-        border: 2px solid transparent
-        background: linear-gradient(rgba(148, 126, 227, 1), rgba(177, 149, 255, 1) 0 0) padding-box, linear-gradient(240.52deg, #59F8D2 7%, rgba(116, 223, 221, 0.43) 28.48%, rgba(161, 180, 239, 0.54) 64.29%, rgba(202, 142, 255, 0.55) 96.31%) border-box
-        box-shadow: 0px 0px 0px 0px rgba(202, 142, 255, 1), 1px 1px 0px 0px rgba(89, 248, 210, .2), 0px 0px 10px 0px rgba(215, 149, 255, 1)
-        font-size: 14px !important
-        font-weight: 700
-        line-height: 16.2px
-        transition: all .5s
-        &:hover
-            box-shadow: 0px 0px 0px 0px rgba(202, 142, 255, 1), -1px -1px 0px 0px rgba(89, 248, 210, 1), 0px 0px -10px 0px rgba(215, 149, 255, 1)
-            background: rgba(177, 149, 255, .99)
-            color: rgba(255, 255, 255, .8) !important
+        border-radius: 20px
+        height: 68px !important
+
+//desktop
+@media (min-width: 1400px)

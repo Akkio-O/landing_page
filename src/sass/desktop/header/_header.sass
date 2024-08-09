@@ -1,27 +1,8 @@
-$widthSearch: 281px
-// @media (min-width: 640px)
-    // .header
-    //     .header__wrapper
-    //         padding: calc(20px + 1vw )
-    //         a
-    //             font-size: calc(11px + 1rem)
-    //         img
-    //             width: calc(101.56px + 5vw)
-    // .header__nav
-    //     width: 100%
-    //     position: relative
-    //     display: flex
-    //     padding: 10px 0
-    //     &_searchBlock
-    //         &-search
-    //             width: $widthSearch * 1.5 !important
-    //             height: 25px
-    //             top: 10px
-    //             padding: 15px
-@media (min-width: 320px) and (max-width: 640px)
-
 @media (min-width: 640px) and (max-width: 980px)
+    .header__nav_searchBlock-search
+        width: calc(281px + 100%) !important
 
+// laptop
 @media (min-width: 980px) and (max-width: 1400px)
     .header
         height: 79px
@@ -35,16 +16,18 @@ $widthSearch: 281px
             &_info
                 display: flex
                 align-items: center
-                gap: calc(20% + 5vw)
+                gap: calc(15% + 5vw)
                 &-tittle
                     img
                         width: calc(101.56px + 1vw)
                 &-link
                     display: flex
                     gap: 24px
+                    a h2
+                        font-size: 24px
                     img
-                        width: 18px
-                        height: 18px
+                        width: calc(18px + 1vw)
+                        height: calc(18px + 1vw)
             &_feedback
                 display: flex
                 align-items: center
@@ -79,8 +62,7 @@ $widthSearch: 281px
                     img
                         display: block
                     h2
-                        font-size: 17px
-
+                        font-size: 20px
         &__nav
             display: none !important
     .nav
@@ -95,6 +77,7 @@ $widthSearch: 281px
                 text-shadow: rgba(215, 149, 255, 1) 0px 0px 4px
                 color: rgba(233, 222, 255, 1)
 
+//desktop
 @media (min-width: 1400px)
     .header
         height: 79px
@@ -108,7 +91,7 @@ $widthSearch: 281px
             &_info
                 display: flex
                 align-items: center
-                gap: calc(95% + 5vw)
+                gap: calc(35% + 5vw)
                 &-tittle
                     img
                         width: calc(101.56px + 5vw)
@@ -116,8 +99,8 @@ $widthSearch: 281px
                     display: flex
                     gap: 24px
                     img
-                        width: 18px
-                        height: 18px
+                        width: calc(18px + 1vw)
+                        height: calc(18px + 1vw)
             &_feedback
                 display: flex
                 align-items: center
@@ -148,11 +131,11 @@ $widthSearch: 281px
                         color: rgba(233, 222, 255, 1)
                 &-tel
                     display: flex
-                    gap: 2.5px
+                    gap: calc(2.5px + 1vw)
                     img
                         display: block
                     h2
-                        font-size: 17px
+                        font-size: 24px
 
         &__nav
             display: none !important
