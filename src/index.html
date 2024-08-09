@@ -14,16 +14,30 @@
 <body>
     <section class="header_nav_promo">
         <header class="header">
-            <div class="header__info d-flex justify-content-between">
-                <img src="./img/logo.svg" alt="">
-                <a class="phone" href="tel:8(812)4095252">
-                    <span class="icon-phone"></span>
-                    <h2>8 812 409-52-22</h2>
-                </a>
+            <div class="header__wrapper d-flex justify-content-between">
+                <div class="header__wrapper_info">
+                    <div class="header__wrapper_info-tittle">
+                        <img src="./img/logo.svg" alt="">
+                    </div>
+                    <div class="header__wrapper_info-link">
+                        <a href="./index" class="active"><h2>УСЛУГИ</h2></a>
+                        <a href="#" class="active"><h2>КЕЙСЫ</h2></a>
+                        <a href="#" class="active"><h2>ЕЩЁ</h2></a>
+                        <img src="./img/icons/search.svg" alt="">
+                    </div>
+                </div>
+                <div class="header__wrapper_feedback">
+                    <div class="header__wrapper_feedback-tel">
+                        <img src="./img/icons/tel.svg" alt="">
+                        <a class="phone" href="tel:8(812)4095252"><h2>8 812 409-52-22</h2></a>
+                    </div>
+                    <button>ЗАДАТЬ ВОПРОС
+                        <img src="./img/icons/arrow.svg" alt="">
+                    </button>
+                </div>
             </div>
             <div class="header__nav d-flex align-items-center" id="nav">
-                <!-- <a href="./index" class="active">Главная</a> -->
-                <div class="hamburger icon">
+                <div class="header__nav_hamburger icon">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -61,7 +75,7 @@
         <div class="advantages__block">
             <div class="">
                 <img src="./img/advantages/headphones.svg" alt="">
-                <p>Удобное общениес заказчиками</p>
+                <p>Удобное общение с заказчиками</p>
             </div>
             <div class="">
                 <img src="./img/advantages/communication.svg" alt="">

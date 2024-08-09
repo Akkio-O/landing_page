@@ -5,7 +5,7 @@ import init from './map/map.mjs';
 document.addEventListener('DOMContentLoaded', () => {
     dataTariff();
 
-    const hamburger = document.querySelector('.hamburger');
+    const hamburger = document.querySelector('.header__nav_hamburger');
     hamburger.addEventListener('click', () => {
         effectHamburger(hamburger);
     });

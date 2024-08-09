@@ -1,0 +1,169 @@
+$widthSearch: 281px
+// @media (min-width: 640px)
+    // .header
+    //     .header__wrapper
+    //         padding: calc(20px + 1vw )
+    //         a
+    //             font-size: calc(11px + 1rem)
+    //         img
+    //             width: calc(101.56px + 5vw)
+    // .header__nav
+    //     width: 100%
+    //     position: relative
+    //     display: flex
+    //     padding: 10px 0
+    //     &_searchBlock
+    //         &-search
+    //             width: $widthSearch * 1.5 !important
+    //             height: 25px
+    //             top: 10px
+    //             padding: 15px
+@media (min-width: 320px) and (max-width: 640px)
+
+@media (min-width: 640px) and (max-width: 980px)
+
+@media (min-width: 980px) and (max-width: 1400px)
+    .header
+        height: 79px
+        padding: 10px 0px 10px 0px
+        justify: space-between
+        background: rgba(29, 1, 65, 0.3)
+        &__wrapper
+            display: flex
+            align-items: center !important
+            padding-bottom: 22px
+            &_info
+                display: flex
+                align-items: center
+                gap: calc(20% + 5vw)
+                &-tittle
+                    img
+                        width: calc(101.56px + 1vw)
+                &-link
+                    display: flex
+                    gap: 24px
+                    img
+                        width: 18px
+                        height: 18px
+            &_feedback
+                display: flex
+                align-items: center
+                gap: 32px
+                button
+                    display: block
+                    position: relative
+                    width: calc(212px - 1vw)
+                    height: 53px
+                    background: rgba(30, 0, 68, 1)
+                    border-radius: 10px
+                    color: rgba(233, 222, 255, 1)
+                    border: 2px solid transparent
+                    font-family: Play
+                    font-size: 20px
+                    font-weight: 400
+                    line-height: 23.14px
+                    letter-spacing: -0.01em
+                    transition: all 2s
+                    @include box-shadowBtn
+                    box-shadow: 0px 0px 3.15px 0px rgba(162, 45, 247, 0.1), 0px 0px 6.52px 0px rgba(162, 45, 247, 0.1), 0px 0px 13px 0px rgba(162, 45, 247, 0.1), 0px 0px 25.48px 0px rgba(162, 45, 247, 0.1), 0px 0px 46.85px 0px rgba(162, 45, 247, 0.1), 0px 0px 19px 9px rgba(162, 45, 247, 0.1)
+                    img
+                        position: absolute
+                        right: 10px
+                        top: 21.5px
+                        width: 10px
+                        height: 10px
+                        color: rgba(233, 222, 255, 1)
+                &-tel
+                    display: flex
+                    gap: 2.5px
+                    img
+                        display: block
+                    h2
+                        font-size: 17px
+
+        &__nav
+            display: none !important
+    .nav
+        padding: 10px 0 0 100px
+        .breadcrumb
+            margin: 0 0 34px 8px
+            li
+                a
+                    color: rgba(233, 222, 255, 1)
+                    text-decoration: none
+            .active span
+                text-shadow: rgba(215, 149, 255, 1) 0px 0px 4px
+                color: rgba(233, 222, 255, 1)
+
+@media (min-width: 1400px)
+    .header
+        height: 79px
+        padding: 10px 0px 10px 0px
+        justify: space-between
+        background: rgba(29, 1, 65, 0.3)
+        &__wrapper
+            display: flex
+            align-items: center !important
+            padding-bottom: 22px
+            &_info
+                display: flex
+                align-items: center
+                gap: calc(95% + 5vw)
+                &-tittle
+                    img
+                        width: calc(101.56px + 5vw)
+                &-link
+                    display: flex
+                    gap: 24px
+                    img
+                        width: 18px
+                        height: 18px
+            &_feedback
+                display: flex
+                align-items: center
+                gap: 32px
+                button
+                    display: block
+                    position: relative
+                    width: calc(212px - 1vw)
+                    height: 53px
+                    background: rgba(30, 0, 68, 1)
+                    border-radius: 10px
+                    color: rgba(233, 222, 255, 1)
+                    border: 2px solid transparent
+                    font-family: Play
+                    font-size: 20px
+                    font-weight: 400
+                    line-height: 23.14px
+                    letter-spacing: -0.01em
+                    transition: all 2s
+                    @include box-shadowBtn
+                    box-shadow: 0px 0px 3.15px 0px rgba(162, 45, 247, 0.1), 0px 0px 6.52px 0px rgba(162, 45, 247, 0.1), 0px 0px 13px 0px rgba(162, 45, 247, 0.1), 0px 0px 25.48px 0px rgba(162, 45, 247, 0.1), 0px 0px 46.85px 0px rgba(162, 45, 247, 0.1), 0px 0px 19px 9px rgba(162, 45, 247, 0.1)
+                    img
+                        position: absolute
+                        right: 10px
+                        top: 21.5px
+                        width: 10px
+                        height: 10px
+                        color: rgba(233, 222, 255, 1)
+                &-tel
+                    display: flex
+                    gap: 2.5px
+                    img
+                        display: block
+                    h2
+                        font-size: 17px
+
+        &__nav
+            display: none !important
+    .nav
+        padding: 10px 0 0 100px
+        .breadcrumb
+            margin: 0 0 34px 8px
+            li
+                a
+                    color: rgba(233, 222, 255, 1)
+                    text-decoration: none
+            .active span
+                text-shadow: rgba(215, 149, 255, 1) 0px 0px 4px
+                color: rgba(233, 222, 255, 1)
