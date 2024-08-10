@@ -1,18 +1,24 @@
 @media (min-width: 640px) and (max-width: 980px)
-.promo__promoSVG
+.promo__svgBlock_promoSVG
     width: 704px !important
 // laptop
-@media (min-width: 980px)
+@media (min-width: 980px) and (max-width: 1400px)
     .promo
         overflow: hidden !important
-        .promo__promoSVG
+        .promo__tittle
+            font-size: 64px
+        .promo__svgBlock_promoSVG
             width: 704px !important
+        .promo__svgBlock_lineSVG
+            height: 740px
+            width: 100%
+            transform: translateY(calc(-150px - 2vw))
         .promo__btn
             border-radius: 20px
             height: 68px !important
-
 //desktop
 @media (min-width: 1400px)
+    .promo__svgBlock_lineSVG
+        height: 821.99px
+        transform: translateY(calc(-200px - 2vw))
 @media (min-width: 1600px)
-    .promo__lineSVG
-        transform: translateY(-200px)

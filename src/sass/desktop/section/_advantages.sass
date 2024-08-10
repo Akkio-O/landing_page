@@ -1,11 +1,29 @@
-.advantages
-    .advantages__block
-        display: grid
-        grid-template-columns: repeat(2, 1fr)
-        gap: 1rem
-        div
-            img
-                display: block
-                margin: 0 auto
-            p
-                word-break: break-word
+@media (min-width: 640px) and (max-width: 980px)
+@media (min-width: 980px) and (max-width: 1400px)
+@media (min-width: 1400px)
+    .advantages
+        h2
+            margin-bottom: 46px
+@media (min-width: 1600px)
+    .advantages
+        h2
+            margin-bottom: 46px
+        &__block
+            display: grid
+            grid-template-columns: repeat(4, 1fr) !important
+            gap: 1rem
+            grid-template-areas: "rocket headphones community history"
+            & > div:nth-child(1)
+                grid-area: headphones
+            & > div:nth-child(2)
+                grid-area: community
+            & > div:nth-child(3)
+                grid-area: rocket
+            & > div:nth-child(4)
+                grid-area: history
+            div
+                img
+                    display: block
+                    margin: 0 auto
+                p
+                    word-break: break-word

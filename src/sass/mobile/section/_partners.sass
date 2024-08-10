@@ -1,17 +1,19 @@
 .partners
     display: flex
-    flex-direction: column
+    flex-direction: row
     gap: 20px
     &__wrapper
         display: grid
         grid-template-columns: repeat(2, minmax(150px, 1fr))
+        height: 320px
         border-top: 1px solid transparent
         border-image-source: linear-gradient(147.77deg, #9400FF 14.56%, rgba(198, 79, 135, 0.83) 86.63%)
         box-shadow: 0px 0px 20px 0px rgba(215, 149, 255, 1), 0px 0px 4px 0px rgba(215, 149, 255, 1)
-
         &_promo
             background: linear-gradient(230.07deg, #FFFFFF -50.81%, #0E9DDD 94.55%)
-            img
+            &-logo
+                display: block
+                margin: auto
                 padding: 21px 0 17px 0
             &-img
                 position: relative
