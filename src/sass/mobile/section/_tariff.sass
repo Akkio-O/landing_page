@@ -1,6 +1,13 @@
 .tariff
     &__wrapper
+        display: flex
+        flex-direction: column
+        gap: 20px
         &_block
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            height: calc(260px + 5vw)
             padding: 19px 12px 18px 12px
             background: rgba(37, 26, 69, .7)
             border-radius: 15px
@@ -19,16 +26,16 @@
                 margin-bottom: 10px
                 p
                     margin-top: auto
-                    font-size: 12px
+                    font-size: calc(11px + .4vw)
                     font-weight: 400
                     line-height: 13.88px
-
                 h2
                     background: linear-gradient(176.42deg, #B195FF -126.75%, #D795FF 97.05%)
                     color: transparent
                     background-clip: text
                     -webkit-background-clip: text
                     font-weight: 700
+                    font-size: calc(20px + .5vw)
                     line-height: 46px
 
             &-text

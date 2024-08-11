@@ -1,45 +1,52 @@
 .cases
-    display: flex
-    flex-direction: column
-    gap: 20px
-    h3
-        background: linear-gradient(266.77deg, #FFFFFF -11.99%, #D795FF 42.41%, #7BC2FE 91.84%)
-        color: transparent
-        background-clip: text
-        -webkit-background-clip: text
+    &__tittle
+        text-align: center
+        h3
+            background: linear-gradient(266.77deg, #FFFFFF -11.99%, #D795FF 42.41%, #7BC2FE 91.84%)
+            color: transparent
+            background-clip: text
+            -webkit-background-clip: text
+            margin-bottom: 40px
     &__wrapper
-        border-radius: 20px
-        background: rgba(72, 5, 114, 0.45)
-        background: linear-gradient(to right, rgb(110, 61, 176) 0,rgb(106, 63, 168) 50%, rgb(96, 55, 147) 100%) padding-box, linear-gradient(147.77deg, #9400FF 14.56%, rgba(198, 79, 135, 0.83) 86.63%) border-box
-        border: 2px solid transparent
-        box-shadow: 0px -2px 7px 0px rgba(148, 0, 255, 14.56), 0px 2px 7px 0px rgba(198, 79, 135, 0.83)
-
-        img
-            width: 100%
-            padding: 33px 33.5px 12px 33.5px
-        &_text
-            padding: 12px 33px 13px 33px
-            margin: 0 auto
-            h3
-                color: white
-            p
-                margin-bottom: 0
-                line-height: 2
-            span
-                background: linear-gradient(176.42deg, #B195FF -126.75%, #D795FF 97.05%)
-                color: transparent
-                background-clip: text
-                -webkit-background-clip: text
-        button
-            width: 155px
-            height: 46px
-            margin: 13px 0 26px 0
-            border-radius: 5px
-            color: white
-            background: rgba(29, 1, 65, 0.3)
-            box-shadow: 1px -1px 0px 0px rgba(89, 248, 210, .4), -1px -1px 0px 0px rgba(116, 223, 221, .43), 1px 1px 1px 0px rgba(161, 180, 239, .54), -1px 1px 1px 0px rgba(202, 142, 255, .55)
-            border: 0px solid
-            transition: .5s
-            &:hover
-                color: rgba(255, 255, 255, .8)
-                box-shadow: -1px -1px 0px 0px rgba(89, 248, 210, .4), 1px -1px 0px 0px rgba(116, 223, 221, .43), -1px 1px 1px 0px rgba(161, 180, 239, .54), 1px 1px 1px 0px rgba(202, 142, 255, .55)
+        display: grid
+        gap: 20px
+        &_section
+            border-radius: 20px
+            background: rgba(72, 5, 114, 0.45)
+            background: linear-gradient(to right, rgb(110, 61, 176) 0,rgb(106, 63, 168) 50%, rgb(96, 55, 147) 100%) padding-box, linear-gradient(147.77deg, #9400FF 14.56%, rgba(198, 79, 135, 0.83) 86.63%) border-box
+            border: 2px solid transparent
+            box-shadow: 0px -2px 7px 0px rgba(148, 0, 255, 14.56), 0px 2px 7px 0px rgba(198, 79, 135, 0.83)
+            img
+                width: 100%
+                padding: 33px 33.5px 12px 33.5px
+            &-promo
+                &--text
+                    padding: 12px 33px 13px 33px
+                    margin: 0 auto
+                    h3
+                        color: white
+                        font-size: 20px
+                    p
+                        margin-bottom: 0
+                        line-height: 2
+                    span
+                        background: linear-gradient(176.42deg, #B195FF -126.75%, #D795FF 97.05%)
+                        color: transparent
+                        background-clip: text
+                        -webkit-background-clip: text
+                &--button
+                    text-align: center
+                    // margin: 12px 33px 13px 33px
+                    button
+                        width: 155px
+                        height: 46px
+                        margin: 13px 0 26px 0
+                        border-radius: 5px
+                        color: white
+                        background: rgba(29, 1, 65, 0.3)
+                        box-shadow: 1px -1px 0px 0px rgba(89, 248, 210, .4), -1px -1px 0px 0px rgba(116, 223, 221, .43), 1px 1px 1px 0px rgba(161, 180, 239, .54), -1px 1px 1px 0px rgba(202, 142, 255, .55)
+                        border: 0px solid
+                        transition: .5s
+                    &:hover
+                        color: rgba(255, 255, 255, .8)
+                        box-shadow: -1px -1px 0px 0px rgba(89, 248, 210, .4), 1px -1px 0px 0px rgba(116, 223, 221, .43), -1px 1px 1px 0px rgba(161, 180, 239, .54), 1px 1px 1px 0px rgba(202, 142, 255, .55)

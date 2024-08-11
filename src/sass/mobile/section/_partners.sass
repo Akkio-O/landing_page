@@ -1,11 +1,11 @@
 .partners
-    display: flex
-    flex-direction: row
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
     gap: 20px
+    height: auto
     &__wrapper
         display: grid
-        grid-template-columns: repeat(2, minmax(150px, 1fr))
-        height: 320px
+        grid-template-columns: repeat(2, minmax(150px, 1fr)) !important
         border-top: 1px solid transparent
         border-image-source: linear-gradient(147.77deg, #9400FF 14.56%, rgba(198, 79, 135, 0.83) 86.63%)
         box-shadow: 0px 0px 20px 0px rgba(215, 149, 255, 1), 0px 0px 4px 0px rgba(215, 149, 255, 1)
@@ -14,11 +14,13 @@
             &-logo
                 display: block
                 margin: auto
-                padding: 21px 0 17px 0
+                width: calc(85px + 2vw)
+                padding: 21px 0 17px 0 !important
             &-img
                 position: relative
                 display: flex
                 justify-content: center
+                height: calc(100px + 2vw) !important
 
         &_text
             background: rgba(72, 5, 114, 0.5)
