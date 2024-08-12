@@ -25,6 +25,7 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "browser-sync": "^3.0.2",
     "clean-webpack-plugin": "^4.0.0",
     "gifsicle": "^7.0.1",
     "glob": "^10.4.5",
