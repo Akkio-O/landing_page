@@ -11,19 +11,41 @@
             gap: calc(20% + 5vw)
             &-tittle
                 img
-                    width: calc(101.56px + 1vw)
+                    width: calc(121.56px + 5vw)
             &-link
                 display: none
-                gap: 24px
+                gap: 30px
+                a
+                    transition: .4s
+                a:hover
+                    color: rgba(255, 255, 255, .8)
+                a:first-child
+                    text-shadow: rgba(215, 149, 255, 1) 0px 0px 20px
                 img
+                    display: none
                     width: 18px
                     height: 18px
+            .responsive
+                position: absolute
+                z-index: 1
+                background: rgb(60, 46, 98)
+                width: 100%
+                height: auto
+                padding: 15px
+                top: 0
+                left: 0
+                transition: 1s all
+                float: none
+                display: block
+                text-align: center
+                justify-content: start
+                font-size: 1rem
         &_feedback
-                button
+            button
+                display: none
+            &-tel
+                img
                     display: none
-                &-tel
-                    img
-                        display: none
 
     .header__nav
         width: 100%
@@ -32,7 +54,7 @@
         padding: 10px 0
         &_searchBlock
             &-search
-                width: 281px
+                width: calc(221px + 5vw)
                 height: 25px
                 top: 10px
                 padding: 15px
@@ -40,9 +62,8 @@
                 border: 1px solid transparent
                 background: url('../img/icons/search.svg') no-repeat right center, linear-gradient(180deg, rgb(114, 99, 166) 0%, rgb(114, 99, 166) 100%) padding-box, linear-gradient(266.77deg, #FFFFFF -11.99%, #9E95FF 42.41%, #FFFFFF 91.84%) border-box
                 background-position: 5% center
-        a
-            // display: none
         &_hamburger
+            z-index: 2
             display: block
             width: 30px
             height: 25px
@@ -65,20 +86,14 @@
                     display: none
                 &:nth-child(3)
                     transform: rotate(45deg)
-    .header__nav.responsive a
-        transition: 1s all
-        float: none
-        display: block
-        text-align: left
-        justify-content: start
-        font-size: 1rem
 .nav
     .breadcrumb
         margin: 0 0 34px 8px
         li
             a
-                color: rgba(233, 222, 255, 1)
-                text-decoration: none
+                transition: .4s
+            a:hover
+                color: rgba(255, 255, 255, .8)
         .active span
             text-shadow: rgba(215, 149, 255, 1) 0px 0px 4px
             color: rgba(233, 222, 255, 1)

@@ -1,29 +1,53 @@
 .promo
+    z-index: 1
     &__tittle
         font-size: 40px
+        font-weight: 700
+        line-height: 40px
+        letter-spacing: -0.02em
         text-align: center
-    .promo__svgBlock_lineSVG, .promo__feedback
+        text-shadow: rgb(215, 149, 255) 0px 0px 10px
+    .promo__wrapper_lineSVG, .promo__feedback
         position: absolute
     &__feedback
+        z-index: 2
         background-color: rgba(30, 0, 68, .5)
         padding: 25px
         right: 0
         border-radius: 15px 0px 0px 15px
-        z-index: 1
         img
             filter: drop-shadow(0px 0px 3px rgba(0, 255, 225, 1))
         hr
             border: 1px solid
-    &__svgBlock
-        &_promoSVG
+    &__wrapper
+        &_img
+            display: flex
             margin: 34px 0 75px 0
             position: relative
-        &_promoSVG, &_lineSVG
+            z-index: 1
+            justify-content: center
+            flex-direction: row-reverse
+        &_img-promo
+            width: 80%
+        &_lineSVG
             width: 100%
+        &_img-itemsPromo
+            img
+                position: absolute
+                z-index: -1
+            img:nth-child(1)
+                bottom: 80px
+                left: -5px
+                width: calc(59.15px + 30%)
+            img:nth-child(2)
+                bottom: 130px
+                right: -13px
+                width: calc(46.09px + 30%)
 
     &__btn
+        height: 60px
         padding: 10px 40px 10px 40px
-        border-radius: 40px
+        border-radius: 20px
         background: rgba(177, 149, 255, 0.5)
         border: 2px solid transparent
         background: linear-gradient(rgba(148, 126, 227, 1), rgba(177, 149, 255, 1) 0 0) padding-box, linear-gradient(240.52deg, #59F8D2 7%, rgba(116, 223, 221, 0.43) 28.48%, rgba(161, 180, 239, 0.54) 64.29%, rgba(202, 142, 255, 0.55) 96.31%) border-box

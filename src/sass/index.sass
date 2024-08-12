@@ -1,22 +1,9 @@
-// Base adaptive-size container
-$adaptive-unit-small: 1vw // 320–640px
-$adaptive-unit-medium: 2vw // 640–980px
-$adaptive-unit-large: 4vw // 980–1400px
-$adaptive-unit-xlarge: 6vw // 1400–1600px
-$adaptive-unit-xxlarge: 8vw // 1600px и больше
-
-// Base adaptive-size font
-$font-small: 0.8rem // 320–640px
-$font-medium: 1rem // 640–980px
-$font-large: 1.2rem // 980–1400px
-$font-xlarge: 1.4rem // 1400–1600px
-$font-xxlarge: 1.6rem // 1600px и больше
-
-// Function for calculating adaptive values
-@function adaptive-calc($value, $adaptive)
-    @return calc(#{$value} + #{$adaptive})
-// @function adaptive-calc($value, $size)
-//     @return calc(#{$value} * #{$size} / 360px)
+// base font
+@font-face
+    font-family: 'Play'
+    src: url('./fonts/Play-Bold.ttf') format('truetype')
+    font-weight: bold
+    font-style: normal
 
 // base function
 @mixin box-shadowBlur
@@ -34,6 +21,7 @@ $font-xxlarge: 1.6rem // 1600px и больше
 // base settings
 body
     color: white
+    font-family: 'Play', sans-serif
 a
     text-decoration: none
     color: white

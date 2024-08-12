@@ -4,9 +4,8 @@ import init from './map/map.mjs';
 import media from './media/media.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
-    dataTariff();
-
     const hamburger = document.querySelector('.header__nav_hamburger');
+    dataTariff();
     hamburger.addEventListener('click', () => {
         effectHamburger(hamburger);
     });

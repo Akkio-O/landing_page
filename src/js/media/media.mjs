@@ -23,16 +23,16 @@ const contactsWrapperLink = document.createElement('div');
 contactsWrapperLink.classList.add('contacts__wrapper_link');
 contactsWrapperLink.innerHTML = `
                 <a class="contacts__wrapper_link_active" href="./index" class="active">
-                    <h2>МЕНЮ</h2>
+                    <h2>Меню</h2>
                 </a>
                 <a href="#" class="active">
-                    <h2>УСЛУГИ</h2>
+                    <h2>Услуги</h2>
                 </a>
                 <a href="#" class="active">
-                    <h2>КЕЙСЫ</h2>
+                    <h2>Кейсы</h2>
                 </a>
                 <a href="#" class="active">
-                    <h2>ЕЩЁ</h2>
+                    <h2>Ещё</h2>
                 </a>`;
 
 // function

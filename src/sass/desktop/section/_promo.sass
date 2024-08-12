@@ -1,24 +1,33 @@
-@media (min-width: 640px) and (max-width: 980px)
-.promo__svgBlock_promoSVG
-    width: 704px !important
+// mobile
+@media (min-width: 400px)
+    .promo__wrapper_img-itemsPromo
+        img:nth-child(1)
+            bottom: calc(30px + 15%)
+        img:nth-child(2)
+            bottom: calc(140px + 15%)
 // laptop
-@media (min-width: 980px) and (max-width: 1400px)
+@media (min-width: 980px)
     .promo
         overflow: hidden !important
         .promo__tittle
             font-size: 64px
-        .promo__svgBlock_promoSVG
-            width: 704px !important
-        .promo__svgBlock_lineSVG
+        .promo__wrapper_img-promo
+            width: 100%
+        .promo__wrapper_img-itemsPromo
+            img:nth-child(1)
+                bottom: 110px !important
+                left: -100px !important
+                width: auto !important
+            img:nth-child(2)
+                bottom: 220px
+                right: -125px
+                width: auto
+        .promo__wrapper_lineSVG
             height: 740px
             width: 100%
             transform: translateY(calc(-150px - 2vw))
-        .promo__btn
-            border-radius: 20px
-            height: 68px !important
 //desktop
 @media (min-width: 1400px)
-    .promo__svgBlock_lineSVG
+    .promo__wrapper_lineSVG
         height: 821.99px
         transform: translateY(calc(-200px - 2vw))
-@media (min-width: 1600px)

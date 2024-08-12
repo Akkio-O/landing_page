@@ -17,9 +17,9 @@
             <div class="header__wrapper d-flex justify-content-between">
                 <div class="header__wrapper_info">
                     <div class="header__wrapper_info-tittle">
-                        <img src="./img/logo.svg" alt="">
+                        <img src="./img/logo.svg" alt="logo">
                     </div>
-                    <div class="header__wrapper_info-link">
+                    <div id="link" class="header__wrapper_info-link">
                         <a href="./index" class="active">
                             <h2>УСЛУГИ</h2>
                         </a>
@@ -29,18 +29,18 @@
                         <a href="#" class="active">
                             <h2>ЕЩЁ</h2>
                         </a>
-                        <img src="./img/icons/search.svg" alt="">
+                        <img src="./img/icons/search.svg" alt="search">
                     </div>
                 </div>
                 <div class="header__wrapper_feedback">
                     <div class="header__wrapper_feedback-tel">
-                        <img src="./img/icons/tel.svg" alt="">
+                        <img src="./img/icons/tel.svg" alt="telephone">
                         <a class="phone" href="tel:8(812)4095252">
                             <h2>8 812 409-52-22</h2>
                         </a>
                     </div>
                     <button>ЗАДАТЬ ВОПРОС
-                        <img src="./img/icons/arrow.svg" alt="">
+                        <img src="./img/icons/arrow.svg" alt="arrow">
                     </button>
                 </div>
             </div>
@@ -65,13 +65,19 @@
         <section class="promo">
             <h2 class="promo__tittle">CRM</h2>
             <div class="promo__feedback d-flex flex-column">
-                <img src="./img/icons/question.svg" alt="">
+                <img src="./img/icons/question.svg" alt="question">
                 <hr>
-                <img src="./img/icons/tel.svg" alt="">
+                <img src="./img/icons/tel.svg" alt="telephone">
             </div>
-            <div class="promo__svgBlock d-flex justify-content-center">
-                <img class="promo__svgBlock_lineSVG" src="./img/line_desktop.svg" alt="">
-                <img class="promo__svgBlock_promoSVG" src="./img/promo.svg" alt="">
+            <div class="promo__wrapper d-flex justify-content-center">
+                <img class="promo__wrapper_lineSVG" src="./img/line_desktop.svg" alt="line_desk">
+                <div class="promo__wrapper_img">
+                    <img class="promo__wrapper_img-promo" src="./img/promo.svg" alt="imgPromo">
+                    <div class="promo__wrapper_img-itemsPromo">
+                        <img src="./img/CRM.webp" alt="CRM">
+                        <img src="./img/Cloud.webp" alt="Cloud">
+                    </div>
+                </div>
             </div>
             <button class="promo__btn d-block m-auto text-white">
                 ОСТАВИТЬ ЗАЯВКУ
@@ -82,19 +88,19 @@
         <h2 class="d-block">Управление бизнес-процессами</h2>
         <div class="advantages__block">
             <div class="">
-                <img src="./img/advantages/headphones.svg" alt="">
+                <img src="./img/advantages/headphones.svg" alt="headphones">
                 <p>Удобное общение с заказчиками</p>
             </div>
             <div class="">
-                <img src="./img/advantages/communication.svg" alt="">
+                <img src="./img/advantages/communication.svg" alt="communication">
                 <p>Лучшие CRM-системы</p>
             </div>
             <div>
-                <img src="./img/advantages/rocket.svg" alt="">
+                <img src="./img/advantages/rocket.svg" alt="rocket">
                 <p>Повышение эффективности отдела продаж</p>
             </div>
             <div>
-                <img src="./img/advantages/card_history.svg" alt="">
+                <img src="./img/advantages/card_history.svg" alt="card_history">
                 <p>Карточка с историей событий для каждого заказчика</p>
             </div>
         </div>
@@ -103,9 +109,9 @@
         <section class="partners">
             <div class="partners__wrapper rounded">
                 <div class="partners__wrapper_promo rounded-start">
-                    <img class="partners__wrapper_promo-logo" src="./img/partners/firstblock/logo.svg" alt="">
+                    <img class="partners__wrapper_promo-logo" src="./img/partners/firstblock/logo.svg" alt="logo">
                     <div class="partners__wrapper_promo-img">
-                        <img src="./img/partners/firstblock/Zen_Galaxy.svg" alt="">
+                        <img src="./img/partners/firstblock/ZenBookDuo14.webp" alt="laptop">
                     </div>
                 </div>
                 <div class="partners__wrapper_text rounded-end">
@@ -114,19 +120,19 @@
                     </div>
                     <div class="partners__wrapper_text-promo">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="pathpath" />
                         </div>
                         <p>CRM</p>
                     </div>
                     <div class="partners__wrapper_text-promo">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Интеграция с другими сервисами</p>
                     </div>
                     <div class="partners__wrapper_text-promo">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Онлайн-бот</p>
                     </div>
@@ -134,9 +140,9 @@
             </div>
             <div class="partners__wrapper rounded">
                 <div class="partners__wrapper_promo rounded-start">
-                    <img class="partners__wrapper_promo-logo" src="./img/partners/secondblock/logo.svg" alt="">
+                    <img class="partners__wrapper_promo-logo" src="./img/partners/secondblock/logo.svg" alt="logo">
                     <div class="partners__wrapper_promo-img">
-                        <img src="./img/partners/secondblock/promoBitrix.svg" alt="">
+                        <img src="./img/partners/secondblock/promoBitrix.webp" alt="laptop">
                     </div>
                 </div>
                 <div class="partners__wrapper_text rounded-end">
@@ -145,19 +151,19 @@
                     </div>
                     <div class="partners__wrapper_text-promo">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>CRM</p>
                     </div>
                     <div class="partners__wrapper_text-promo">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Корпоративный портал</p>
                     </div>
                     <div class="partners__wrapper_text-promo">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Интеграция с другими сервисами и т.д.</p>
                     </div>
@@ -180,7 +186,7 @@
                 <button>ОСТАВИТЬ ЗАЯВКУ</button>
             </form>
         </section>
-        <img class="partners__img" src="./img/line_desktop2.svg" alt="">
+        <img class="partners__img" src="./img/line_desktop2.svg" alt="line_desk">
     </section>
     <section class="usefully">
         <h2>КОМУ ПОЛЕЗНО CRM</h2>
@@ -198,15 +204,15 @@
                 <p>На компьютер, подключите гарнитуру и звоните прямо из CRM одним кликом</p>
             </div>
             <div class="usefully__wrapper_device">
-                <img class="usefully__wrapper_device-phone" src="./img/usefully/device.svg" alt="">
+                <img class="usefully__wrapper_device-phone" src="./img/usefully/device.svg" alt="device">
                 <div class="usefully__wrapper_device-img">
-                    <img class="usefully__wrapper_device-img--background" src="./img/usefully/peter-boehme.png" alt="">
+                    <img class="usefully__wrapper_device-img--background" src="./img/usefully/peter-boehme.webp"
+                        alt="wrapper">
                     <div class="usefully__wrapper_device-img--illustration">
-                        <img src="./img/usefully/illustration_1.svg" alt="">
-                        <img src="./img/usefully/illustration_2.svg" alt="">
-                        <img src="./img/usefully/illustration_3.svg" alt="">
+                        <img src="./img/usefully/illustration_1.svg" alt="task">
+                        <img src="./img/usefully/illustration_2.svg" alt="task">
+                        <img src="./img/usefully/illustration_3.svg" alt="task">
                     </div>
-                    <!-- <img src="./img/usefully/phone_wrapper.svg" alt=""> -->
                 </div>
             </div>
         </div>
@@ -218,7 +224,7 @@
         </div>
         <div class="cases__wrapper">
             <div class="cases__wrapper_section">
-                <img src="./img/cases/case1.svg" alt="">
+                <img src="./img/cases/case1.webp" alt="case1">
                 <div class="cases__wrapper_section-promo">
                     <div class="cases__wrapper_section-promo--text">
                         <h3>“Пестовский Лесокомбинат”</h3>
@@ -231,7 +237,7 @@
                 </div>
             </div>
             <div class="cases__wrapper_section">
-                <img src="./img/cases/case2.svg" alt="">
+                <img src="./img/cases/case2.webp" alt="case2">
                 <div class="cases__wrapper_section-promo">
                     <div class="cases__wrapper_section-promo--text">
                         <h3>Магазин “Mongol Store”</h3>
@@ -246,7 +252,9 @@
         </div>
     </section>
     <section class="tariff">
-        <h2 class="text-center">СТОИМОСТЬ ПОДКЛЮЧЕНИЯ</h2>
+        <div class="tariff__tittle">
+            <h2>СТОИМОСТЬ ПОДКЛЮЧЕНИЯ</h2>
+        </div>
         <div class="tariff__wrapper">
             <div class="tariff__wrapper_block">
                 <div class="tariff__wrapper_block-crm">
@@ -256,13 +264,13 @@
                 <div class="tariff__wrapper_block-text">
                     <div class="tariff__wrapper_block-text--content">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Покупка любого тарифа со скидкой</p>
                     </div>
                 </div>
                 <button data-tariff="crm-connection" class="text-center">ЗАКАЗАТЬ
-                    <img src="./img/icons/arrow.svg" alt="">
+                    <img src="./img/icons/arrow.svg" alt="path">
                 </button>
             </div>
             <div class="tariff__wrapper_block">
@@ -273,19 +281,19 @@
                 <div class="tariff__wrapper_block-text">
                     <div class="tariff__wrapper_block-text--content">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Покупка любого тарифа со скидкой</p>
                     </div>
                     <div class="tariff__wrapper_block-text--content">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Индивидуальная настройка системы</p>
                     </div>
                 </div>
                 <button data-tariff="crm-setup" class="text-center">ЗАКАЗАТЬ
-                    <img src="./img/icons/arrow.svg" alt="">
+                    <img src="./img/icons/arrow.svg" alt="arrow">
                 </button>
             </div>
             <div class="tariff__wrapper_block">
@@ -296,13 +304,13 @@
                 <div class="tariff__wrapper_block-text">
                     <div class="tariff__wrapper_block-text--content">
                         <div>
-                            <img src="./img/icons/path.svg" alt="" />
+                            <img src="./img/icons/path.svg" alt="path" />
                         </div>
                         <p>Возможность продления лицензий со скидкой от официальных цен</p>
                     </div>
                 </div>
                 <button data-tariff="license-renewal" class="text-center">ЗАКАЗАТЬ
-                    <img src="./img/icons/arrow.svg" alt="">
+                    <img src="./img/icons/arrow.svg" alt="arrow">
                 </button>
             </div>
         </div>
@@ -328,7 +336,7 @@
                 </div>
             </form>
             <div class="tariff__modal_thanks" id="thanks">
-                <img src="./img/icons/bigPath.svg" alt="">
+                <img src="./img/icons/bigPath.svg" alt="bigPath">
                 <h2>Ваша заявка успешно отправлена!</h2>
             </div>
         </div>
@@ -353,19 +361,21 @@
                     <button>ОТПРАВИТЬ ЗАЯВКУ</button>
                 </form>
             </div>
-            <img class="crmRequest__wrapper_img" src="./img/crmRequest/planet_community.png" alt="">
+            <img class="crmRequest__wrapper_img" src="./img/crmRequest/planet_community.webp" alt="planet">
         </div>
     </section>
     <section class="partnerCrm text-center">
-        <h2>НАШ ПАРТНЁР ПО CRM-СИСТЕМАМ</h2>
+        <div class="partnerCrm__tittle">
+            <h2>НАШ ПАРТНЁР ПО CRM-СИСТЕМАМ</h2>
+        </div>
         <div class="partnerCrm__wrapper">
             <div class="partnerCrm__wrapper_img">
-                <img src="./img/partnerCrm/background.svg" width="200px" alt="">
+                <img src="./img/partnerCrm/background.svg" width="200px" alt="background">
                 <div class="partnerCrm__wrapper_img-abs">
                     <img class="partnerCrm__wrapper_img-abs--bitrix" width="140px" src="./img/partnerCrm/bitrix24.svg"
-                        alt="">
+                        alt="bitrix24">
                     <img class="partnerCrm__wrapper_img-abs--amocrm" width="120px" src="./img/partnerCrm/amocrm.svg"
-                        alt="">
+                        alt="amoCRM">
                 </div>
             </div>
             <div class="partnerCrm__wrapper_text">
@@ -373,12 +383,12 @@
                     <hr>
                     <div class="partnerCrm__wrapper_text-wrapper--selectPartner">
                         <p>Битрикс24 (Управление бизнесом)</p>
-                        <img src="./img/icons/arrow-right.svg" alt="">
+                        <img src="./img/icons/arrow-right.svg" alt="arrow-right">
                     </div>
                     <hr>
                     <div class="partnerCrm__wrapper_text-wrapper--selectPartner">
                         <p>amoCRM (Управление бизнесом)</p>
-                        <img src="./img/icons/arrow-right.svg" alt="">
+                        <img src="./img/icons/arrow-right.svg" alt="arrow-right">
                     </div>
                     <hr>
                 </div>
@@ -419,10 +429,10 @@
             </div>
         </div>
         <div class="contacts__footer text-center">
-            <img class="contacts__footer_logo" src="./img/contacts/logoAlpha.svg" alt="">
+            <img class="contacts__footer_logo" src="./img/contacts/logoAlpha.svg" alt="logo">
             <div class="contacts__footer_messengers">
-                <img src="./img/icons/vk.svg" alt="">
-                <img src="./img/icons/telegram.svg" alt="">
+                <img src="./img/icons/vk.svg" alt="vk">
+                <img src="./img/icons/telegram.svg" alt="telegram">
             </div>
         </div>
         <div class="contacts__End">
